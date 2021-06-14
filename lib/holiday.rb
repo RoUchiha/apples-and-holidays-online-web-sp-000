@@ -93,7 +93,7 @@ def all_supplies_in_holidays(holiday_hash)
         print "#{holiday_string}: #{supply_string}
         "
         
-      end
+      
     end
   end
 end
