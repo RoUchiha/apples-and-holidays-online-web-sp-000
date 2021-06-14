@@ -74,9 +74,25 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_string = String.new 
   supply_string = String.new 
   
-  holiday_hash.each do |season, holiday|
+  holiday_hash.each do |season, holidays|
     season_string = season.to_s.capitalize!
-  
+    
+    holidays.each do |holiday, supplies|
+      
+      supply_string = supplies.to_s
+      holiday_string = holiday.to_s
+      if holiday_string.include?("_")
+        new_holiday = []
+        holiday_string.split("_") = new_holiday;
+        new_holiday.capitalize!;
+        new_holiday.join(", ") = holiday_string
+        
+        print "#{season_string}:
+        #{holiday_string}: #{supply_string}"
+        
+      end
+    end
+  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
