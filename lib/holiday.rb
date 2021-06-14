@@ -78,7 +78,7 @@ def all_supplies_in_holidays(holiday_hash)
     
     season_string = season.to_s.capitalize!
     
-    print " #{season_string}:
+    spot1 = " #{season_string}:
     "
     
     holidays.each do |holiday, supplies|
@@ -92,9 +92,11 @@ def all_supplies_in_holidays(holiday_hash)
         holiday_string = holiday.to_s.capitalize!
       end
         
-        print "#{holiday_string}: #{supply_string}
+        spot2 = "#{holiday_string}: #{supply_string}
         "
         
+        print "#{spot1}:
+        #{spot2}"
     end
   end
 end
