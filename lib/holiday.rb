@@ -83,9 +83,9 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_string = holiday.to_s
       if holiday_string.include?("_")
         new_holiday = []
-        holiday_string.split("_") = new_holiday;
+        new_holiday << holiday_string.split("_") ;
         new_holiday.capitalize!;
-        new_holiday.join(", ") = holiday_string
+        holiday_string = new_holiday.join(", ")
         
         print "#{season_string}:
         #{holiday_string}: #{supply_string}"
