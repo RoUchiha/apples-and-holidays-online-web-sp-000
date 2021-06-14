@@ -75,7 +75,9 @@ def all_supplies_in_holidays(holiday_hash)
   supply_string = ""
   
   holiday_hash.each do |season, holidays|
+    
     season_string = season.to_s.capitalize!
+    
     print " #{season_string}:
     "
     
