@@ -61,7 +61,7 @@ def all_winter_holiday_supplies(holiday_hash)
   
 end
 
-def all_supplies_in_holidays(holiday_hash)
+# def all_supplies_in_holidays(holiday_hash)
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
   #   Christmas: Lights, Wreath
@@ -70,43 +70,43 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   
-  season_string = ""
-  holiday_string = ""
-  supply_string = ""
+#   season_string = ""
+#   holiday_string = ""
+#   supply_string = ""
   
-  holiday_hash.each do |season, holidays|
+#   holiday_hash.each do |season, holidays|
     
-    season_string = season.to_s.capitalize!
+#     season_string = season.to_s.capitalize!
     
-    spot1 = "#{season_string}:"
+#     spot1 = "#{season_string}:"
     
-    holidays.each do |holiday, supplies|
-      
-      supply_string = supplies.join(", ")
-      holiday_string = holiday.to_s
-      
-      if holiday_string.include?("_") == true
-        holiday_string = holiday_string.split('_').map(&:capitalize!).join(' ')
-      elsif holiday_string.include?("_") == false 
-        holiday_string = holiday.to_s.capitalize!
-      end
-        
-        spot2 = "#{holiday_string}: #{supply_string}"
-        
-        puts "#{spot1}"
-        puts "#{spot2}"
-    end
-  end
-end
-
-# def all_supplies_in_holidays(supplies_hash)
-#   holiday_supplies.each do |season, holidays|
-#     puts "#{season.capitalize}:"
 #     holidays.each do |holiday, supplies|
-#       puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
+      
+#       supply_string = supplies.join(", ")
+#       holiday_string = holiday.to_s
+      
+#       if holiday_string.include?("_") == true
+#         holiday_string = holiday_string.split('_').map(&:capitalize!).join(' ')
+#       elsif holiday_string.include?("_") == false 
+#         holiday_string = holiday.to_s.capitalize!
+#       end
+        
+#         spot2 = "#{holiday_string}: #{supply_string}"
+        
+#         puts "#{spot1}"
+#         puts "#{spot2}"
 #     end
 #   end
 # end
+
+def all_supplies_in_holidays(supplies_hash)
+  holiday_supplies.each do |season, holidays|
+    puts "#{season.capitalize}:"
+    holidays.each do |holiday, supplies|
+      puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
+    end
+  end
+end
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
