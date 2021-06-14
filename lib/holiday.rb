@@ -79,7 +79,7 @@ def all_supplies_in_holidays(holiday_hash)
     
     holidays.each do |holiday, supplies|
       
-      supply_string = supplies.to_s
+      supply_string = supplies.join(", ")
       
       if holiday_string.include?("_")
         holiday_string = holiday_string.split("_").map(&:capitalize!).join(" ")
