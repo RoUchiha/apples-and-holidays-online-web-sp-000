@@ -70,31 +70,15 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   
-  season_string = ""
-  holiday_string = ""
-  supply_string = ""
   
   holiday_hash.each do |season, holidays|
     
-    season_string = season.to_s.capitalize!
-    
-    spot1 = "#{season_string}:"
+    puts "#{season.capitalize!}:"
     
     holidays.each do |holiday, supplies|
       
-      supply_string = supplies.join(", ")
-      holiday_string = holiday.to_s
-      
-      if holiday_string.include?("_") == true
-        holiday_string = holiday_string.split('_').map(&:capitalize!).join(' ')
-      elsif holiday_string.include?("_") == false 
-        holiday_string = holiday.to_s.capitalize!
-      end
-        
-        spot2 = "#{holiday_string}: #{supply_string}"
-        
-        puts "#{spot1}"
-        puts "#{spot2}"
+      puts "#{holiday.to_s.split('_').map(&:capitalize!).join(' ')}: #{supplies.join(", ")}"
+    
     end
   end
 end
