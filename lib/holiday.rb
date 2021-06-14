@@ -92,8 +92,7 @@ def all_supplies_in_holidays(holiday_hash)
         holiday_string = holiday.to_s.capitalize!
       end
         
-        spot2 = "#{holiday_string}: #{supply_string}
-        "
+        spot2 = "#{holiday_string}: #{supply_string}"
         
         print "#{spot1}
         #{spot2}"
