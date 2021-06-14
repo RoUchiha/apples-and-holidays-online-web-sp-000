@@ -111,7 +111,7 @@ holiday_hash.each do |season, holiday|
       bbq_holidays << day
     end
   end
-  
+end
   return bbq_holidays
 
 end
