@@ -70,8 +70,12 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   
+  season_string = String.new 
+  holiday_string = String.new 
+  supply_string = String.new 
   
-  holiday_hash.each do |season, holidays|
+  holiday_hash.each do |season, holiday|
+    season_string = season.to_s.capitalize!
   
 end
 
