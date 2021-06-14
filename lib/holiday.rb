@@ -93,8 +93,8 @@ def all_supplies_in_holidays(holiday_hash)
         
         spot2 = "#{holiday_string}: #{supply_string}"
         
-        print "#{spot1}
-        #{spot2}"
+        puts "#{spot1}"
+        puts "#{spot2}"
     end
   end
 end
