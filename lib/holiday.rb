@@ -83,7 +83,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_string = holiday.to_s
       if holiday_string.include?("_")
         new_holiday = []
-        new_holiday << holiday_string.split("_") ;
+        new_holiday << holiday_string.split("_").flatten;
         new_holiday.capitalize!;
         holiday_string = new_holiday.join(", ")
         
