@@ -88,7 +88,8 @@ def all_supplies_in_holidays(holiday_hash)
       else holiday_string = holiday.to_s.capitalize!
         
         
-        print "#{holiday_string}: #{supply_string}"
+        print "#{holiday_string}: #{supply_string}
+        "
         
       end
     end
