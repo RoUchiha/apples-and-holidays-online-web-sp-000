@@ -70,9 +70,9 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   
-  season_string = String.new 
-  holiday_string = String.new 
-  supply_string = String.new 
+  season_string = ""
+  holiday_string = ""
+  supply_string = ""
   
   holiday_hash.each do |season, holidays|
     season_string = season.to_s.capitalize!
@@ -84,7 +84,7 @@ def all_supplies_in_holidays(holiday_hash)
       
       if holiday_string.include?("_")
         holiday_string = holiday_string.split("_").map(&:capitalize!).join(" ")
-      else holiday_string = holiday.to_s
+      else holiday_string = holiday.to_s.capitalize!
         
         print "#{season_string}:
         #{holiday_string}: #{supply_string}"
