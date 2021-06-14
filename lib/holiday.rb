@@ -88,7 +88,7 @@ def all_supplies_in_holidays(holiday_hash)
         holiday_string = holiday_string.split('_').map(&:capitalize).join(' ')
       elsif holiday_string.include?("_") == false 
         holiday_string = holiday.to_s.capitalize!
-        
+      end
         
         print "#{holiday_string}: #{supply_string}
         "
